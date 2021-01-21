@@ -70,8 +70,19 @@ namespace FinalProject_Attack_Phase
         SolidBrush healthBar = new SolidBrush(Color.Green);
         SolidBrush grayBrush = new SolidBrush(Color.Gray);
         Random randGen = new Random();
-        #endregion 
+        SoundPlayer heroAttack = new SoundPlayer(Properties.Resources.Swipe);
+        SoundPlayer heroHurt = new SoundPlayer(Properties.Resources.playerHurt);
+        SoundPlayer crabAttack = new SoundPlayer(Properties.Resources.crabAttack);
+        SoundPlayer crabHurt = new SoundPlayer(Properties.Resources.crabHurt);
+        SoundPlayer BabyYodaAttack = new SoundPlayer(Properties.Resources.BabyYodaAttack);
+        SoundPlayer BabyYodaHurt = new SoundPlayer(Properties.Resources.BabyYodaHurt);
+        SoundPlayer covidAttack = new SoundPlayer(Properties.Resources.cough);
+        SoundPlayer covidHurt = new SoundPlayer(Properties.Resources.hurtCough);
+        SoundPlayer vampireAttack = new SoundPlayer(Properties.Resources.vampireAttack);
+        SoundPlayer vampireHurt = new SoundPlayer(Properties.Resources.vampireHurt);
         
+        #endregion
+
         public Form1()
         {
             InitializeComponent();
@@ -80,7 +91,7 @@ namespace FinalProject_Attack_Phase
         #region // input click
         private void inputOne_Click(object sender, EventArgs e)
         {
-           switch (mode)
+            switch (mode)
             {
                 case 1:
                     Variable_Reset();
@@ -386,6 +397,22 @@ namespace FinalProject_Attack_Phase
                                             }
                                         }
                                         enemyHealth[currentEnemy] -= playerDamage[weaponChoice];
+                                        heroAttack.PlaySync();
+                                        switch (currentEnemy)
+                                        {
+                                            case 0:
+                                                crabHurt.Play();
+                                                break;
+                                            case 1:
+                                                BabyYodaHurt.Play();
+                                                break;
+                                            case 2:
+                                                covidHurt.Play();
+                                                break;
+                                            case 3:
+                                                vampireHurt.Play();
+                                                break;
+                                        }
                                     }
                                     else outputLabel.Text = "You Missed";
                                 }
@@ -426,6 +453,8 @@ namespace FinalProject_Attack_Phase
                         Refresh();
                         Thread.Sleep(1000);
                         //enemy attacks
+
+
                         if (!defended)
                         {
                             enemyMissed = randGen.Next(1, 101);
@@ -515,6 +544,21 @@ namespace FinalProject_Attack_Phase
                                         }
                                         break;
                                 }
+                                switch (currentEnemy)
+                                {
+                                    case 0:
+                                        crabAttack.Play();
+                                        break;
+                                    case 1:
+                                        BabyYodaAttack.Play();
+                                        break;
+                                    case 2:
+                                        covidAttack.Play();
+                                        break;
+                                    case 3:
+                                        vampireAttack.Play();
+                                        break;
+                                }
                             }
                             else outputLabel.Text = "They Missed!";
                         }
@@ -539,8 +583,6 @@ namespace FinalProject_Attack_Phase
                         }
                         attackPhase = 1;
                     }
-                    enemyHealthBar.Text = $"{enemyHealth[currentEnemy]}";
-                    playerHealthBar.Text = $"{playerHealth}";
                     currentEnemtyHealthDiffrence = enemyMaxHealth[currentEnemy] - enemyHealth[currentEnemy];
                     Refresh();
                     break;
@@ -711,8 +753,6 @@ namespace FinalProject_Attack_Phase
             inputFour.Text = "Escape";
             inputBack.Text = "";
             enemyNameLabel.Text = $"{enemyName[currentEnemy]}";
-            enemyHealthBar.Text = $"{enemyHealth[currentEnemy]}";
-            playerHealthBar.Text = $"{playerHealth}";
             if (temp == 0) enemyLabel.Image = Properties.Resources.crab;
             if (temp == 1) enemyLabel.Image = Properties.Resources.yoda1;
             if (temp == 2) enemyLabel.Image = Properties.Resources.covid_19;

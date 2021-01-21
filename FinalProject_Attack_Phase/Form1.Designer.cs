@@ -40,8 +40,6 @@ namespace FinalProject_Attack_Phase
             this.enemyLabel = new System.Windows.Forms.Label();
             this.outputLabel = new System.Windows.Forms.Label();
             this.enemyNameLabel = new System.Windows.Forms.Label();
-            this.enemyHealthBar = new System.Windows.Forms.Label();
-            this.playerHealthBar = new System.Windows.Forms.Label();
             this.HeaderLabel = new System.Windows.Forms.Label();
             this.rulesLabel = new System.Windows.Forms.Label();
             this.enemyTwo = new System.Windows.Forms.Label();
@@ -60,7 +58,7 @@ namespace FinalProject_Attack_Phase
             // 
             // inputOne
             // 
-            this.inputOne.Font = new System.Drawing.Font("m5x7", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputOne.Location = new System.Drawing.Point(12, 491);
             this.inputOne.Name = "inputOne";
             this.inputOne.Size = new System.Drawing.Size(250, 56);
@@ -72,7 +70,7 @@ namespace FinalProject_Attack_Phase
             // 
             // inputTwo
             // 
-            this.inputTwo.Font = new System.Drawing.Font("m5x7", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputTwo.Location = new System.Drawing.Point(262, 491);
             this.inputTwo.Name = "inputTwo";
             this.inputTwo.Size = new System.Drawing.Size(250, 56);
@@ -84,7 +82,7 @@ namespace FinalProject_Attack_Phase
             // 
             // inputThree
             // 
-            this.inputThree.Font = new System.Drawing.Font("m5x7", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputThree.Location = new System.Drawing.Point(12, 552);
             this.inputThree.Name = "inputThree";
             this.inputThree.Size = new System.Drawing.Size(250, 56);
@@ -96,7 +94,7 @@ namespace FinalProject_Attack_Phase
             // 
             // inputFour
             // 
-            this.inputFour.Font = new System.Drawing.Font("m5x7", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputFour.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputFour.Location = new System.Drawing.Point(262, 552);
             this.inputFour.Name = "inputFour";
             this.inputFour.Size = new System.Drawing.Size(250, 56);
@@ -108,7 +106,7 @@ namespace FinalProject_Attack_Phase
             // 
             // inputBack
             // 
-            this.inputBack.Font = new System.Drawing.Font("m5x7", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputBack.Location = new System.Drawing.Point(949, 556);
             this.inputBack.Name = "inputBack";
             this.inputBack.Size = new System.Drawing.Size(123, 53);
@@ -127,7 +125,7 @@ namespace FinalProject_Attack_Phase
             // outputLabel
             // 
             this.outputLabel.BackColor = System.Drawing.Color.LightCoral;
-            this.outputLabel.Font = new System.Drawing.Font("m5x7", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputLabel.Location = new System.Drawing.Point(544, 462);
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(384, 146);
@@ -136,35 +134,17 @@ namespace FinalProject_Attack_Phase
             // enemyNameLabel
             // 
             this.enemyNameLabel.BackColor = System.Drawing.Color.LightCoral;
-            this.enemyNameLabel.Font = new System.Drawing.Font("m5x7", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enemyNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enemyNameLabel.Location = new System.Drawing.Point(822, 9);
             this.enemyNameLabel.Name = "enemyNameLabel";
             this.enemyNameLabel.Size = new System.Drawing.Size(250, 56);
             this.enemyNameLabel.TabIndex = 11;
             this.enemyNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // enemyHealthBar
-            // 
-            this.enemyHealthBar.BackColor = System.Drawing.Color.Gray;
-            this.enemyHealthBar.Font = new System.Drawing.Font("m5x7", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enemyHealthBar.Location = new System.Drawing.Point(162, 6);
-            this.enemyHealthBar.Name = "enemyHealthBar";
-            this.enemyHealthBar.Size = new System.Drawing.Size(100, 23);
-            this.enemyHealthBar.TabIndex = 12;
-            // 
-            // playerHealthBar
-            // 
-            this.playerHealthBar.BackColor = System.Drawing.Color.Gray;
-            this.playerHealthBar.Font = new System.Drawing.Font("m5x7", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playerHealthBar.Location = new System.Drawing.Point(12, 9);
-            this.playerHealthBar.Name = "playerHealthBar";
-            this.playerHealthBar.Size = new System.Drawing.Size(100, 23);
-            this.playerHealthBar.TabIndex = 13;
-            // 
             // HeaderLabel
             // 
             this.HeaderLabel.BackColor = System.Drawing.Color.LightCoral;
-            this.HeaderLabel.Font = new System.Drawing.Font("m5x7", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HeaderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HeaderLabel.Location = new System.Drawing.Point(283, 6);
             this.HeaderLabel.Name = "HeaderLabel";
             this.HeaderLabel.Size = new System.Drawing.Size(521, 59);
@@ -175,7 +155,7 @@ namespace FinalProject_Attack_Phase
             // rulesLabel
             // 
             this.rulesLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rulesLabel.Font = new System.Drawing.Font("m5x7", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rulesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rulesLabel.Location = new System.Drawing.Point(756, 79);
             this.rulesLabel.Name = "rulesLabel";
             this.rulesLabel.Size = new System.Drawing.Size(316, 365);
@@ -203,7 +183,7 @@ namespace FinalProject_Attack_Phase
             // pictureLabel
             // 
             this.pictureLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureLabel.Font = new System.Drawing.Font("m5x7", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pictureLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pictureLabel.Image = global::FinalProject_Attack_Phase.Properties.Resources.title;
             this.pictureLabel.Location = new System.Drawing.Point(12, 79);
             this.pictureLabel.Name = "pictureLabel";
@@ -247,8 +227,6 @@ namespace FinalProject_Attack_Phase
             this.Controls.Add(this.enemyTwo);
             this.Controls.Add(this.HeaderLabel);
             this.Controls.Add(this.enemyThree);
-            this.Controls.Add(this.playerHealthBar);
-            this.Controls.Add(this.enemyHealthBar);
             this.Controls.Add(this.enemyNameLabel);
             this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.enemyLabel);
@@ -283,8 +261,6 @@ namespace FinalProject_Attack_Phase
         private System.Windows.Forms.Label enemyLabel;
         private System.Windows.Forms.Label outputLabel;
         private System.Windows.Forms.Label enemyNameLabel;
-        private System.Windows.Forms.Label enemyHealthBar;
-        private System.Windows.Forms.Label playerHealthBar;
         private System.Windows.Forms.Label enemyTwo;
         private System.Windows.Forms.Label enemyThree;
         private System.Windows.Forms.Label enemyOne;

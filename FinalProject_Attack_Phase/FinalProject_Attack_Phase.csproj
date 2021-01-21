@@ -107,5 +107,35 @@
   <ItemGroup>
     <None Include="Resources\Papirus-Team-Papirus-Apps-Sakura-dungeon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Swoosh 3-SoundBible.com-1573211927.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male Grunt-SoundBible.com-68178715.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dry Cough-SoundBible.com-1957692509.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male_cough-Mike_Koenig-144979711.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hot Sizzling-SoundBible.com-403305607.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bubbling-SoundBible.com-1684132696.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Baby Sneeze-SoundBible.com-998128538.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Swoosh 1-SoundBible.com-231145780.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vampire Bite-SoundBible.com-99609093.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie In Pain-SoundBible.com-134322253.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
