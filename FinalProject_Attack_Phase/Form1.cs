@@ -397,7 +397,7 @@ namespace FinalProject_Attack_Phase
                                             }
                                         }
                                         enemyHealth[currentEnemy] -= playerDamage[weaponChoice];
-                                        heroAttack.PlaySync();
+                                        heroAttack.Play();
                                         switch (currentEnemy)
                                         {
                                             case 0:
@@ -604,6 +604,7 @@ namespace FinalProject_Attack_Phase
                     inputFour.Visible = false;
                     pictureLabel.Image = Properties.Resources.title;
                     inputBack.Text = "contiune";
+                    rulesLabel.Text = "";
 
                     if (playerDefeat)
                     {
@@ -701,7 +702,7 @@ namespace FinalProject_Attack_Phase
                     outputLabel.Text = "See The Rules";
                     break;
                 case 2:
-                    outputLabel.Text = $"Fight Covid-19\n{enemyHealth[enemy3]}\nCovid-19 Has The Most Health, But Its Attacks Are Weak\nWatch Out For Its Infection, It Has A 6% Chance Of Killing You\nSowrd And Axe Attacks Will Exposs You So Try And Avoid Those Attacks";
+                    outputLabel.Text = $"Fight Covid-19\n{enemyHealth[enemy3]} Health\nCovid-19 Has The Most Health, But Its Attacks Are Weak\nWatch Out For Its Infection, It Has A 6% Chance Of Killing You\nSowrd And Axe Attacks Will Exposs You So Try And Avoid Those Attacks";
                     break;
                 case 3:
                     switch (attackPhase)
