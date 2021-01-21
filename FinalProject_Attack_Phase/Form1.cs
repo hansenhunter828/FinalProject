@@ -29,6 +29,7 @@ namespace FinalProject_Attack_Phase
         string[] playerMove = {"Sword","Axe","Bow","Spear"};
         int[] playerDamage = {4,8,5,10};
         int[] playerMoveChance = {99,70,85,60};
+
         int healUse = 2;
         bool healed;
         bool failed;
