@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*January 2021
+ * Created By: Sam Wolfgram
+ * A small collection of battles in turn based combat.
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +24,7 @@ namespace FinalProject_Attack_Phase
         int attackPhase = 1;
         int chances;
 
-        string Rules = "Fight In Four Battles With Classic Enemys Like Crabs And Vampires. You Have Two Heals And You Keep Your Health In Each Battle.\n\nGood Luck!";
+        string Rules = "Fight In Four Battles With Classic Enemys Like Crabs And Vampires. Your Health Will Not Regerate Between Battles. The Attack Menu Will Show You Your Attacks, The Heal Button Will Heal You But Only Twice. The Defend Button Will Defend You From An Attack, And The Escape Button Will Allow You To Leave;\n\nGood Luck!";
         string Credits = "Created by Sam Wolfgram\n\nDesigned by Sam Wolfgram\n\nTaught by Mr T.\n\nImages from The Internet\n\nSounds from The Internet\n\nFont from Daniel Linssen";
         //player variables
         int playerHealth = 100;
@@ -301,7 +305,7 @@ namespace FinalProject_Attack_Phase
                     inputThree.Text = "Rules";
                     inputFour.Text = "Credits";
                     inputBack.Text = "Exit";
-                    HeaderLabel.Text = "RPG Dungeaon";
+                    HeaderLabel.Text = "RPG Dungeon";
                     inputOne.Visible = true;
                     inputTwo.Visible = true;
                     inputThree.Visible = true;
@@ -416,7 +420,7 @@ namespace FinalProject_Attack_Phase
                                     }
                                     else outputLabel.Text = "You Missed";
                                 }
-                                else outputLabel.Text = "Your are Defeneded";
+                                else outputLabel.Text = "Your are Defended";
                             }
                             else failed = false;
                         }
@@ -424,6 +428,7 @@ namespace FinalProject_Attack_Phase
                         if (currentEnemy == enemy1 && enemyHealth[currentEnemy] <= 0)
                         {
                             enemy1Defeat = true;
+                            outputLabel.Text = "You Defeated The Crab";
                             mode = 2;
                             Refresh();
                             break;
@@ -431,6 +436,7 @@ namespace FinalProject_Attack_Phase
                         if (currentEnemy == enemy2 && enemyHealth[currentEnemy] <= 0)
                         {
                             enemy2Defeat = true;
+                            outputLabel.Text = "You Defeated Baby Yoda";
                             mode = 2;
                             Refresh();
                             break;
@@ -438,6 +444,7 @@ namespace FinalProject_Attack_Phase
                         if (currentEnemy == enemy3 && enemyHealth[currentEnemy] <= 0)
                         {
                             enemy3Defeat = true;
+                            outputLabel.Text = "You Defeated Covid-19\nCan We Leave Our Homes Now?";
                             mode = 2;
                             Refresh();
                             break;
@@ -445,6 +452,7 @@ namespace FinalProject_Attack_Phase
                         if (currentEnemy == enemy4 && enemyHealth[currentEnemy] <= 0)
                         {
                             enemy4Defeat = true;
+                            outputLabel.Text = "You Defeated A Vampire\nWhos The Vampire Slayer Now?!";
                             mode = 2;
                             Refresh();
                             break;
@@ -476,18 +484,18 @@ namespace FinalProject_Attack_Phase
                                         {
                                             playerHealth -= enemyDamage3[currentEnemy];
                                             enemyHealth[currentEnemy] += enemyDamage3[currentEnemy];
-                                            outputLabel.Text = $"{enemyMove3[currentEnemy]}";
+                                            outputLabel.Text = $"It {enemyMove3[currentEnemy]}d You\nNo Fair!";
                                         }
                                         else if (enemyMove3[currentEnemy] == "mutate" && enemyHealth[currentEnemy] <= 42)
                                         {
                                             enemyHealth[currentEnemy] += enemyDamage3[currentEnemy];
-                                            outputLabel.Text = $"{enemyMove3[currentEnemy]}";
+                                            outputLabel.Text = $"It Can {enemyMove3[currentEnemy]}!\nAnd It Gets Health!";
                                         }
                                         else if (enemyMove3[currentEnemy] == "Blood Suck")
                                         {
                                             playerHealth -= enemyDamage3[currentEnemy];
                                             if (enemyHealth[currentEnemy] <= 24) enemyHealth[currentEnemy] += enemyDamage3[currentEnemy];
-                                            outputLabel.Text = $"{enemyMove3[currentEnemy]}";
+                                            outputLabel.Text = $"He Just Sucked Your Blood!\n Thats Not Fair!";
                                         }
                                         else
                                         {
@@ -499,7 +507,7 @@ namespace FinalProject_Attack_Phase
                                         if (enemyMove4[currentEnemy] == "magic stare down")
                                         {
                                             playerHealth -= enemyDamage4[currentEnemy];
-                                            outputLabel.Text = $"{enemyMove4[currentEnemy]}";
+                                            outputLabel.Text = $"They Used Magic Stare Down Into...";
                                             Refresh();
                                             Thread.Sleep(1000);
                                             enemyMoveChoice = randGen.Next(0, 4);
@@ -507,20 +515,20 @@ namespace FinalProject_Attack_Phase
                                             {
                                                 case 0:
                                                     playerHealth -= enemyDamage1[currentEnemy];
-                                                    outputLabel.Text = $"{enemyMove1[currentEnemy]}";
+                                                    outputLabel.Text = $"{enemyMove1[currentEnemy]}!";
                                                     break;
                                                 case 1:
                                                     playerHealth -= enemyDamage2[currentEnemy];
-                                                    outputLabel.Text = $"{enemyMove2[currentEnemy]}";
+                                                    outputLabel.Text = $"{enemyMove2[currentEnemy]}!";
                                                     break;
                                                 case 2:
                                                     playerHealth -= enemyDamage3[currentEnemy];
                                                     if (enemyHealth[currentEnemy] <= 26) enemyHealth[currentEnemy] += enemyDamage3[currentEnemy];
-                                                    outputLabel.Text = $"{enemyMove3[currentEnemy]}";
+                                                    outputLabel.Text = $"{enemyMove3[currentEnemy]}!";
                                                     break;
                                                 case 3:
                                                     playerHealth -= enemyDamage4[currentEnemy];
-                                                    outputLabel.Text = $"{enemyMove4[currentEnemy]}";
+                                                    outputLabel.Text = $"{enemyMove4[currentEnemy]}!";
                                                     break;
                                             }
 
@@ -529,13 +537,13 @@ namespace FinalProject_Attack_Phase
                                         {
                                             chances = randGen.Next(1, 101);
                                             if (chances <= 6) playerHealth -= enemyDamage4[currentEnemy];
-                                            outputLabel.Text = $"{enemyMove4[currentEnemy]}";
+                                            outputLabel.Text = $"You Have Benn {enemyMove4[currentEnemy]}ed";
                                         }
                                         else if (enemyMove4[currentEnemy] == "boiling water")
                                         {
                                             playerHealth -= enemyDamage4[currentEnemy];
                                             enemyHealth[currentEnemy] -= enemyDamage4[currentEnemy];
-                                            outputLabel.Text = $"{enemyMove4[currentEnemy]}";
+                                            outputLabel.Text = $"It Hurt you with {enemyMove4[currentEnemy]}\nHow the Tables Have Turned!";
                                         }
                                         else
                                         {
@@ -745,6 +753,7 @@ namespace FinalProject_Attack_Phase
 
         private void ModeTwo_Choose(int temp)
         {
+            //setting up for the battle in mode three
             currentEnemy = temp;
             mode = 3;
             attackPhase = 1;
@@ -763,11 +772,14 @@ namespace FinalProject_Attack_Phase
 
         private void Variable_Reset()
         {
+            //reseting all the variables
             playerHealth = playerMaxHealth;
             enemyHealth[0] = enemyMaxHealth[0];
             enemyHealth[1] = enemyMaxHealth[1];
             enemyHealth[2] = enemyMaxHealth[2];
             enemyHealth[3] = enemyMaxHealth[3];
+
+            healUse = 2;
 
             enemy1Defeat = false;
             enemy2Defeat = false;
